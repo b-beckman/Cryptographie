@@ -1,6 +1,6 @@
 # TP Widmer Module 122 : Documentation
 
-### Fonctions utilisées pour les scripts
+### Fonctions utilisées pour les scripts :
 
 ### Documentation sur la lib Argparse :
 
