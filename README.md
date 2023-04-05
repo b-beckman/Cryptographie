@@ -1,5 +1,7 @@
 # TP Widmer Module 122 : Documentation
 
+### Fonctions utilisées pour les scripts
+
 ### Documentation sur la lib Argparse :
 
 > La librairie (bibliothèque) Argparse facilite l'écriture d'interface en ligne de commande. Le programme définit es
@@ -31,7 +33,9 @@ parser.add_argument('-v', '--verbose',
                     action='store_true')  # on/off flag
 ```
 
-* On peut utiliser plusieurs arguments lorsqu'on utilise 
+* On peut utiliser plusieurs arguments lorsqu'on utilise add_Argument()
+
+> action : 'store', 'store_const', 'store_true', 'append', 'append_const', 'count', 'help', 'version'
 
 * La méthode ArgumentParser.parse_args() lance l'analyseur et stocke les résultats dans un objet argparse.Namespace :
 
@@ -39,3 +43,9 @@ parser.add_argument('-v', '--verbose',
 args = parser.parse_args()
 print(args.test.txt, args.count, args.verbose)
 ```
+
+### Fonction chiffrement + tests :
+
+### Fonction déchiffrement + tests :
+
+### Conclusion :
