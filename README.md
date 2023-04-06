@@ -52,7 +52,6 @@ store, store_const,store_true,append,append_const,count,help,versio
 ```
 None par défauts
 ```
-
 * dest = Définit le nom de l'attribut à utiliser dans l'espace de nommage résultant
 
 * help = Message d'aide pour l'argument
@@ -76,13 +75,15 @@ True ou False
 ```
 int, float, argparse.FileType('w') ou une fonction
 ```
+
 **_La méthode ArgumentParser.parse_args() lance l'analyseur et stocke les résultats dans un objet argparse.Namespace :_**
+
 ```
 args = parser.parse_args()
 print(args.test.txt, args.count, args.verbose)
 ```
 
-### Creating a parser (analyseur) :
+### Créer un analyseur (parser) :
 
 * la premières étape est de créer un arguments (avec l'objet ArgumentParser)
 
@@ -96,7 +97,7 @@ parser = argparse.ArgumentParser(description='Process some integers.')
 
 * Pour ajouter des arguments,à l'objet ArgumentParser, il faut utiliser la méthode add_argument().
 * **On va lui dire commnent interprêtre les lignes de commandes pour ensuite pouvoir le tranformer en objet**
-* On va stocké l'informations avant d'uiliser le résultat avec la fonction parse_args()
+* On va stocké l'informations avant d'uiliser le résultat avec la fonction parse_args().
 
 ```
 parser.add_argument('integers', metavar='N', type=int, nargs='+',
