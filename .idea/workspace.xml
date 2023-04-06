@@ -26,9 +26,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/Mds/Documents/Epsic/M.Wiedmer/Cryptographie",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,6 +50,8 @@
       <updated>1680689230451</updated>
       <workItem from="1680689231952" duration="289000" />
       <workItem from="1680689546133" duration="5478000" />
+      <workItem from="1680783910434" duration="80000" />
+      <workItem from="1680784066856" duration="2483000" />
     </task>
     <servers />
   </component>
