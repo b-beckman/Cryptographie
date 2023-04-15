@@ -191,6 +191,8 @@ def main():
     print("Message codé:", encrypt_result)
 
 ```
+
+ 
 ![Screenshot from 2023-04-15 02-39-59.png](images%2FScreenshot%20from%202023-04-15%2002-39-59.png)
 
 ## Fonction déchiffrement + tests :

@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98eb9250-7a27-4ae3-a992-cf451792cbb3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vigenere_encode.py" beforeDir="false" afterPath="$PROJECT_DIR$/vigenere_encode.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
       <workItem from="1680786875580" duration="1948000" />
       <workItem from="1680793072339" duration="611000" />
       <workItem from="1681512632751" duration="5724000" />
-      <workItem from="1681519049043" duration="217000" />
+      <workItem from="1681519049043" duration="424000" />
     </task>
     <servers />
   </component>
