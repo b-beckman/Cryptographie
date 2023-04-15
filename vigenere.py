@@ -79,10 +79,10 @@ def main():
     parser = argparse.ArgumentParser()
 
     # On ajoute les arguments "phrase" et "key"
-    parser.add_argument('phrase' help="Phrase à encrypter")
-    parser.add_argument('key' help="clé de cryptage")
+    parser.add_argument('phrase', help="Phrase à encrypter")
+    parser.add_argument('key', help="clé de cryptage")
     # Ajout d'un flag pour le decodage
-    parser.add_argument('--decode', action='store_true' help="decodage")
+    parser.add_argument('--decode', action='store_true', help="decodage")
     # On récupère les arguments de la ligne de commande
     args = parser.parse_args()
 
@@ -93,7 +93,7 @@ def main():
         decrypt_result = decodage_vigenere(args.phrase, args.key)
         print("Message décodé:", decrypt_result)
     else:
-        encrypt_result = encodage_vigenere(args.phrase, args.key)
+        encrypt_result = codage_vigenere(args.phrase, args.key)
         print("Message codé:", encrypt_result)
 
 if __name__ == '__main__':
