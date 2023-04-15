@@ -1,16 +1,21 @@
 # TP Widmer Module 122 : Documentation
 ## Comment utiliser le script :
-```
-python vigenere.py "message a coder" "CleDeCryptage"
-```
-* Cette commande vous permet d'encrypter une phrase
 
-```
-python vigenere.py "message a coder" "CleDeCryptage" --decode
-```
-* Cette commande vous permet de decrypter une phrase grace au flag 'decode'
-qui indique à la fonction main d'utiliser la fonctionalitée de decryptage. 
+    python vigenere.py "message a coder" "CleDeCryptage"
+  Cette commande vous permet d'encrypter une phrase
 
+    python vigenere.py --input file.txt --output output.txt
+  Cette commande vous permet d'encrypter une phrase depuis un fichier .txt par exemple
+  Notez que le format du fichier txt doit être écrit comme si-dessous
+  ![Fichier texte modele](images/Fichier-texte-modele.png)
+
+    python vigenere.py "message codé" "CleDeCryptage" --decode
+  Cette commande vous permet de decrypter une phrase grace à l'argument 'decode'
+  qui indique à la fonction main d'utiliser la fonctionalitée de decryptage. 
+
+    python vigenere.py --input file.txt --output output.txt --decode
+  decoder le fichier de resultat
+  	
 ## Fonctions utilisées pour les scripts :
 
 - encodage_vigenere() demande deux paramètres, une phrase et une clé.

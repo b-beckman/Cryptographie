@@ -79,22 +79,46 @@ def main():
     parser = argparse.ArgumentParser()
 
     # On ajoute les arguments "phrase" et "key"
-    parser.add_argument('phrase', help="Phrase à encrypter")
-    parser.add_argument('key', help="clé de cryptage")
+    parser.add_argument('phrase', nargs='?', help="Phrase à encrypter")
+    parser.add_argument('key', nargs='?', help="clé de cryptage")
     # Ajout d'un flag pour le decodage
     parser.add_argument('--decode', action='store_true', help="decodage")
+    # Ajout d'un argument pour le fichier d'entrée
+    parser.add_argument('--input', '-i', help="Fichier d'entrée")
+    # Ajout d'un argument pour le fichier de sortie
+    parser.add_argument('--output', '-o', help="Fichier de sortie")
+    
     # On récupère les arguments de la ligne de commande
     args = parser.parse_args()
 
+    # Si un fichier d'entrée est spécifié, on lit le contenu du fichier au lieu de l'argument "phrase"
+    if args.input:
+        with open(args.input, 'r') as f:
+            phrase = f.read()
+    else:
+        phrase = args.phrase
+        
+    # Si un fichier d'entrée est spécifié, on lit la clé du fichier au lieu de l'argument "key"
+    if args.input:
+        with open(args.input, 'r') as f:
+            key = f.readline().strip()
+    else:
+        key = args.key
+    
     # Condition pour savoir quel fonction l'utilisateur veut appeler
     # Les deux conditions fonctionnent de la même manière appel de la fonction,
     # puis print du resultat
     if args.decode:
-        decrypt_result = decodage_vigenere(args.phrase, args.key)
-        print("Message décodé:", decrypt_result)
+        result = decodage_vigenere(phrase, key)
+        print("Message décodé:", result)
     else:
-        encrypt_result = codage_vigenere(args.phrase, args.key)
-        print("Message codé:", encrypt_result)
+        result = codage_vigenere(phrase, key)
+        print("Message codé:", result)
+    
+    # Si un fichier de sortie est spécifié, on écrit le résultat dans le fichier au lieu de l'afficher
+    if args.output:
+        with open(args.output, 'w') as f:
+            f.write(result)
 
 if __name__ == '__main__':
     main()
