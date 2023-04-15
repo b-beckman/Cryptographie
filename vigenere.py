@@ -1,14 +1,6 @@
 import argparse
 
 def codage_vigenere(phrase, key):
-    """
-    Cette fonction prend en entrée une phrase et une clé et retourne le codage_vigenere du texte en utilisant le chiffrement de Vigenère.
-
-    :param phrase: la phrase à encrypter.
-    :param key: la clé à utiliser.
-    :les paramètres sont forcément en string vu qu'on est dans la console
-    :return: le codage_vigenere du texte (string).
-    """
     # On initialise la variable qui contiendra le résultat encrypté
     encrypt_result = ""
 
@@ -41,17 +33,10 @@ def codage_vigenere(phrase, key):
     return encrypt_result
 
 def decodage_vigenere(phraseDeco, key):
-    #Cette fonction prend en paramètres une phrase chiffrée et une clé, et retourne la phrase déchiffrée en utilisant le chiffrement de Vigenère.
 
-    #param phraseDeco: la phrase à déchiffrer.
-    #param key: la clé à utiliser.
-    #return: la phrase déchiffrée (string).
-    # On initialise la variable qui contiendra le résultat décrypté
     decrypt_result = ""
-
     # On initialise la variable qui servira à parcourir la clé
     key_index = 0
-
     # On parcourt chaque caractère de la phrase à décrypter
     for chara in phraseDeco:
         # Si le caractère est une lettre de l'alphabet
