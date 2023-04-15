@@ -5,7 +5,6 @@
 * Notre script contien une grosse fonction (cryptage), qui contient des arguments, sinon la function principale (main)
 * Cette fonctionn va prendre le mot, ou phrase taper par l'utilisateur ainsi que la clé pour faire le chiffrage
 
-
 ## Documentation sur la lib Argparse :
 
 > La librairie (bibliothèque) **Argparse facilite l'écriture d'interface en ligne de commande.** Le programme définit es
@@ -127,6 +126,7 @@ Namespace(accumulate=<built-in function sum>, integers=[7, -1, 42])
 ```
 
 ## Fonction chiffrement + tests :
+
 ```
 
 import argparse
@@ -192,7 +192,6 @@ def main():
 
 ```
 
- 
 ![Screenshot from 2023-04-15 02-39-59.png](images%2FScreenshot%20from%202023-04-15%2002-39-59.png)
 
 ## Fonction déchiffrement + tests :
