@@ -311,11 +311,11 @@ Si un fichier de sortie est spécifié avec l'argument --output, on écrit le r�
 
 ## Conclusion :
 
-* Le chiffre de Vigenère est une technique de chiffrement qui consiste à substituer une lettre du message en clair (
-  polyalphabétique), par une autre choisie en suivant un shéma logique (une clé). Son créateur est Blaise de Vigenère,
-  qui créer cette technique de chiffremnt au 16 ème siècle.Mais cette technique rencontre quelle vulnérabilité, si la
-  clé de chiffrement est trop courte, ou bien si le message est trop long (plus il est long, plus il y aura lettre
-  identiques vont apparaitre dans le message, ce qui va permettre de déduire des partie du message)
+Le chiffre de Vigenère est une technique de chiffrement qui consiste à substituer une lettre du message en clair (
+polyalphabétique), par une autre choisie en suivant un shéma logique (une clé). Son créateur est Blaise de Vigenère,
+qui créer cette technique de chiffremnt au 16 ème siècle.Mais cette technique rencontre quelle vulnérabilité, si la
+clé de chiffrement est trop courte, ou bien si le message est trop long (plus il est long, plus il y aura lettre
+identiques vont apparaitre dans le message, ce qui va permettre de déduire des partie du message)
 
 ## Sources :
 
