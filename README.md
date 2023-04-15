@@ -7,6 +7,7 @@
     python vigenere.py --input file.txt --output output.txt
   Cette commande vous permet d'encrypter une phrase depuis un fichier .txt par exemple
   Notez que le format du fichier txt doit être écrit comme si-dessous
+
   ![Fichier texte modele](images/Fichier-texte-modele.png)
 
     python vigenere.py "message codé" "CleDeCryptage" --decode
@@ -203,7 +204,7 @@ On parcourt chaque caractère de la phrase à encrypter
             decrypted_chara = chr((ord(chara.lower()) - 97 - shift) % 26 + 97)
   On parcourt chaque caractère de la phrase à décrypter
   Si le caractère est une lettre de l'alphabet
-  On convertit la lettre de la clé en ASCII et on la normalise entre 0 et 25 (correspondant 
+  On convertit la lettre de la clé en ASCII et on la normalise entre 0 et 25
   On applique la formule du déchiffrement de Vigenère pour obtenir la lettre décryptée
 
             decrypt_result += decrypted_chara
@@ -223,19 +224,37 @@ On parcourt chaque caractère de la phrase à encrypter
 
 ## Fonction main :
     def main():
-
     parser = argparse.ArgumentParser()
   On crée un objet ArgumentParser qui sert à stocker des arguments utilisables par la suite en ligne de commande
 
-    parser.add_argument('phrase')
-    parser.add_argument('key')
-  On ajoute les arguments "phrase" et "key"
+    parser.add_argument('phrase', nargs='?', help="Phrase à encrypter")
+    parser.add_argument('key', nargs='?', help="clé de cryptage")
+  On ajoute les arguments "phrase" et "key" et également le paramètre nargs='?' pour préciser que l'argument peut-être égal à zéro ou à 1. Autrement dit que l'argument peut être vide.
+  
+    parser.add_argument('--input', '-i', help="Fichier d'entrée")
+    parser.add_argument('--output', '-o', help="Fichier de sortie")
+  Ajout d'un argument pour le fichier d'entrée 
+  Ajout d'un argument pour le fichier de sortie 
 
-    parser.add_argument('--decode', action='store_true')
+    parser.add_argument('--decode', action='store_true', help="decodage")
   Ajout d'un argument 'flag' pour le decodage, il permet de préciser si l'utilisateur shouaite decoder un message plutôt que de le decoder.
 
     args = parser.parse_args()
   On récupère les arguments de la ligne de commande
+
+    if args.input:
+        with open(args.input, 'r') as f:
+            phrase = f.read()
+    else:
+        phrase = args.phrase
+  Si un fichier d'entrée est spécifié avec l'argument --input, le programme utilisera le contenu du fichier.
+
+    if args.input:
+        with open(args.input, 'r') as f:
+            key = f.readline().strip()
+    else:
+        key = args.key
+  Si un fichier d'entrée est spécifié, on lit la clé du fichier au lieu de l'argument "key"
 
     if args.decode:
         decrypt_result = decodage_vigenere(args.phrase, args.key)
@@ -243,10 +262,15 @@ On parcourt chaque caractère de la phrase à encrypter
     else:
         encrypt_result = encodage_vigenere(args.phrase, args.key)
         print("Message codé:", encrypt_result)
-
   Condition pour savoir quel fonction l'utilisateur veut appeler
   Les deux conditions fonctionnent de la même manière appel de la fonction concernée,
   puis print du resultat
+
+    if args.output:
+        with open(args.output, 'w') as f:
+            f.write(result)       
+  Si un fichier de sortie est spécifié avec l'argument --output, on écrit le résultat dans le fichier
+
 ## Conclusion :
 
 
