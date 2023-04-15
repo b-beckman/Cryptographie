@@ -1,5 +1,4 @@
 # TP Widmer Module 122 : Documentation
-
 ## Comment utiliser le script :
 ```
 python vigenere.py "message a coder" "CleDeCryptage"

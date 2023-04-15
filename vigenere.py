@@ -96,6 +96,5 @@ def main():
         encrypt_result = encodage_vigenere(args.phrase, args.key)
         print("Message codé:", encrypt_result)
 
-
 if __name__ == '__main__':
     main()
